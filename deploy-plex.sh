@@ -2,6 +2,7 @@ docker run \
 -d \
 --name plex \
 --network=host \
+--restart always \
 -e TZ="Europe/Paris" \
 -e PLEX_CLAIM="claim-6sE1uFkUVrPzwebzL7kq" \
 -v /mnt/volumeI/data/plextemp:/config \
