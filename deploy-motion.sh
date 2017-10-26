@@ -1,5 +1,4 @@
 docker run -d --name=motioneye \
-    --device=/dev/video0
     -p 8081:8081 \
     -p 8765:8765 \
     -e TIMEZONE="Europe/Paris" \
