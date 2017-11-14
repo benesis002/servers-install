@@ -10,6 +10,13 @@
     "network": "bridge",
     "restart_policy":"always",
     "volumes": ["/opt/JDownloader/cfg","/downloads"],
-    "command":"echo lol"
+    "command":"echo "{"password":"$MYJDOWNLOADER_PASSWORD","email":"$MYJDOWNLOADER_USER"}" >> /opt/JDownloader/cfg/org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json && /opt/JDownloader/startJD2.sh",
+    "env": [{
+      "name": "MYJDOWNLOADER_USER",
+      "description": "Username of your myjdownloader account"
+    },{
+      "name": "MYJDOWNLOADER_PASSWORD",
+      "description": "Password of your myjdownloader account"
+    }]
   }
 ]
