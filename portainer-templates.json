@@ -7,6 +7,8 @@
     "platform": "linux",
     "logo": "http://zen-info.fr/wp-content/uploads/2011/03/jdownloader.png",
     "image": "plusminus/jdownloader2-headless:latest",
-    "volumes": [{"container":"/var/lib/registry","volume":"jdownloader-data"},"/downloads"]
+    "network": "bridge",
+    "restart_policy":"always",
+    "volumes": ["/opt/JDownloader/cfg","/downloads"]
   }
 ]
