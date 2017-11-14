@@ -14,8 +14,7 @@
     ],
     "restart_policy": "always",
     "volumes": [
-      "/downloads",
-      "jdownloader-data:/opt/JDownloader/cfg"
+      "/downloads"
     ]
   },
   {
