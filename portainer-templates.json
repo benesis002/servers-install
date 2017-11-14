@@ -10,6 +10,6 @@
     "ports": [
       "5000/tcp"
     ],
-    "volumes": ["/var/lib/registry"]
+    "volumes": ["jdownloader-data:/var/lib/registry"]
   }
 ]
