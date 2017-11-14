@@ -8,12 +8,7 @@
     ],
     "platform": "linux",
     "logo": "http://zen-info.fr/wp-content/uploads/2011/03/jdownloader.png",
-    "image": "plusminus/jdownloader2-headless:latest",
-    "restart_policy": "always",
-    "volumes": [
-      "/downloads",
-      "jdownloader-data:/opt/JDownloader/cfg"
-    ]
+    "image": "plusminus/jdownloader2-headless:latest"
   },
   {
     "type": "container",
