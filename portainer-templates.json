@@ -11,5 +11,17 @@
       "5000/tcp"
     ],
     "volumes": ["/var/lib/registry"]
+  },{
+    "type": "container",
+    "title": "Test",
+    "description": "Docker image registry",
+    "categories": ["docker"],
+    "platform": "linux",
+    "logo": "https://www.jeedom.com/blog/wp-content/uploads/2015/03/logo-jeedom-petit-nom-couleur-256x256.png",
+    "image": "registry:latest",
+    "ports": [
+      "5000/tcp"
+    ],
+    "volumes": ["/var/lib/registry"]
   }
  ]
