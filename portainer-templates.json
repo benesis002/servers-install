@@ -12,7 +12,6 @@
     "port": [
       
     ],
-    "restart_policy": "always",
     "volumes": [
       "/downloads"
     ]
