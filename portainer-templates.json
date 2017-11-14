@@ -5,7 +5,7 @@
     "description": "Docker image registry",
     "categories": ["docker"],
     "platform": "linux",
-    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
+    "logo": "http://zen-info.fr/wp-content/uploads/2011/03/jdownloader.png",
     "image": "registry:latest",
     "ports": [
       "5000/tcp"
