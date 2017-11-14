@@ -10,15 +10,7 @@
     "restart_policy": "always"
     "ports": [
     ],
-    "volumes": [
-    {
-      "container": "/downloads"
-    },
-    {
-      "container": "/opt/JDownloader/cfg",
-      "bind": "jdownloader-data"
-    }
-  ]
+    "volumes": ["/downloads","jdownloader-data:/opt/JDownloader/cfg"]
   },{
     "type": "container",
     "title": "Test_2",
