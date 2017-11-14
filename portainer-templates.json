@@ -1,13 +1,15 @@
 [
   {
     "type": "container",
-    "title": "Jdownloader",
-    "description": "Deploy a Jdownloader container",
-    "categories": [
-      "docker"
-    ],
+    "title": "Registry",
+    "description": "Docker image registry",
+    "categories": ["docker"],
     "platform": "linux",
-    "logo": "http://zen-info.fr/wp-content/uploads/2011/03/jdownloader.png",
-    "image": "plusminus/jdownloader2-headless:latest",
+    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
+    "image": "registry:latest",
+    "ports": [
+      "5000/tcp"
+    ],
+    "volumes": ["/var/lib/registry"]
   }
 ]
