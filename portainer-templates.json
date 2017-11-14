@@ -9,28 +9,5 @@
     "platform": "linux",
     "logo": "http://zen-info.fr/wp-content/uploads/2011/03/jdownloader.png",
     "image": "plusminus/jdownloader2-headless:latest",
-    "port": [
-      
-    ],
-    "volumes": [
-      "/downloads"
-    ]
-  },
-  {
-    "type": "container",
-    "title": "Test_2",
-    "description": "Docker image registry",
-    "categories": [
-      "docker"
-    ],
-    "platform": "linux",
-    "logo": "https://www.jeedom.com/blog/wp-content/uploads/2015/03/logo-jeedom-petit-nom-couleur-256x256.png",
-    "image": "registry:latest",
-    "ports": [
-      "5000/tcp"
-    ],
-    "volumes": [
-      "/var/lib/registry"
-    ]
   }
 ]
