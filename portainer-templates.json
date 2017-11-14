@@ -13,7 +13,7 @@
     "volumes": ["/var/lib/registry"]
   },{
     "type": "container",
-    "title": "Test",
+    "title": "Test_2",
     "description": "Docker image registry",
     "categories": ["docker"],
     "platform": "linux",
