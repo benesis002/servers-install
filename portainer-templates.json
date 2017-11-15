@@ -9,6 +9,6 @@
     "image": "plusminus/jdownloader2-headless:latest",
     "network": "bridge",
     "restart_policy":"always",
-    "volumes": ["/opt/JDownloader/cfg","/downloads"],
+    "volumes": ["/opt/JDownloader/cfg","/downloads"]
   }
 ]
