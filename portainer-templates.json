@@ -13,9 +13,11 @@
     "command":"echo \"{\"password\":\"$MYJDOWNLOADER_PASSWORD\",\"email\":\"$MYJDOWNLOADER_USER\"}\" > \/opt\/JDownloader\/cfg\/org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json && \/opt\/JDownloader\/startJD2.sh",
     "env": [{
       "name": "MYJDOWNLOADER_USER",
+      "label": "MyJdownlader Username",
       "description": "Username of your myjdownloader account"
     },{
       "name": "MYJDOWNLOADER_PASSWORD",
+      "label": "MyJdownlader Password",
       "description": "Password of your myjdownloader account"
     }]
   }
