@@ -28,8 +28,9 @@
 		"network": "bridge",
 		"restart_policy": "always",
 		"volumes": [
-			"/opt/JDownloader/cfg",
-			"/downloads"
+			"/config",
+			"/transcode",
+			"/data"
 		],
 		"port": [
 			"32400:32400/tcp",
