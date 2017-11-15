@@ -55,7 +55,7 @@
 			{
 				"name": "ADVERTISE_IP",
 				"label": "Host Server IP",
-				"set": "http://<hostIPAddress>:32400/"
+				"description": "http://<hostIPAddress>:32400/"
 			}
 		]
 	}
