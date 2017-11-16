@@ -98,5 +98,30 @@
 				"label": "PUID",
 				"set": "0"
 			}]
+	},
+ 	{
+		"type": "container",
+		"title": "Duplicati ARM",
+		"description": "Deploy Duplicati Container",
+		"categories": [
+			"docker"
+		],
+		"platform": "linux",
+		"logo": "https://www.duplicati.com/images/duplicati-fb-share-v1.png",
+		"image": "lsioarmhf/duplicati:latest",
+		"network": "bridge",
+		"restart_policy": "always",
+		"ports": ["8200/tcp"],
+		"volumes": [{"container": "/source","bind": "/var/lib/docker/volumes"},"/config"],
+		"env": [{
+				"name": "PGID",
+				"label": "PGID",
+				"set": "0"
+			},
+			{
+				"name": "PUID",
+				"label": "PUID",
+				"set": "0"
+			}]
 	}
 ]
