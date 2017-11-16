@@ -72,7 +72,7 @@
 		"network": "bridge",
 		"restart_policy": "always",
 		"volumes": [{"container": "/var/run/docker.sock","bind": "/var/run/docker.sock"}],
-		"command": "--schedule 0 3 0 * * * --cleanup --debug"
+		"command": "--schedule '0 3 0 * * *' --cleanup --debug"
 	},
  	{
 		"type": "container",
