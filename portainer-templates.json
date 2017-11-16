@@ -86,6 +86,7 @@
 		"image": "linuxserver/duplicati:latest",
 		"network": "bridge",
 		"restart_policy": "always",
+		"ports": ["8200"],
 		"volumes": [{"container": "/docker-volumes","bind": "/var/lib/docker/volumes"},"/config"]
 	}
 ]
