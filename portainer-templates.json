@@ -24,7 +24,7 @@
 		],
 		"platform": "linux",
 		"logo": "http://ift.tt/1YIpkvj",
-		"image": "plexinc/pms-docker",
+		"image": "plexinc/pms-docker:latest",
 		"network": "bridge",
 		"restart_policy": "always",
 		"volumes": [
@@ -58,5 +58,20 @@
 				"description": "http://<hostIPAddress>:32400/"
 			}
 		]
-	}
+	},
+ 	{
+		"type": "container",
+		"title": "Watchtower",
+		"description": "Deploy Watchtower Container",
+		"categories": [
+			"docker"
+		],
+		"platform": "linux",
+		"logo": "https://freemobileapk.com/wp-content/uploads/2014/09/com_jvillella_watchtowerlibrary.png",
+		"image": "v2tec/watchtower:latest",
+		"network": "bridge",
+		"restart_policy": "always",
+		"volumes": [{"container": "/var/run/docker.sock","bind": "/var/run/docker.sock"}],
+		"command": "--schedule 0 3 0 * * * --cleanup --debug"
+	},
 ]
