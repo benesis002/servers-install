@@ -73,5 +73,19 @@
 		"restart_policy": "always",
 		"volumes": [{"container": "/var/run/docker.sock","bind": "/var/run/docker.sock"}],
 		"command": "--schedule 0 3 0 * * * --cleanup --debug"
+	},
+ 	{
+		"type": "container",
+		"title": "Duplicati",
+		"description": "Deploy Duplicati Container",
+		"categories": [
+			"docker"
+		],
+		"platform": "linux",
+		"logo": "https://www.duplicati.com/images/duplicati-fb-share-v1.png",
+		"image": "linuxserver/duplicati:latest",
+		"network": "bridge",
+		"restart_policy": "always",
+		"volumes": [{"container": "/docker-volumes","bind": "/var/lib/docker/volumes"},"/config"]
 	}
 ]
