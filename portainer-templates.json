@@ -76,6 +76,21 @@
 	},
  	{
 		"type": "container",
+		"title": "Watchtower ARM",
+		"description": "Deploy Watchtower Container",
+		"categories": [
+			"docker"
+		],
+		"platform": "linux",
+		"logo": "https://freemobileapk.com/wp-content/uploads/2014/09/com_jvillella_watchtowerlibrary.png",
+		"image": "v2tec/watchtower:armhf-latest",
+		"network": "bridge",
+		"restart_policy": "always",
+		"volumes": [{"container": "/var/run/docker.sock","bind": "/var/run/docker.sock"}],
+		"command": "--schedule '0 3 0 * * *' --cleanup --debug"
+	},
+ 	{
+		"type": "container",
 		"title": "Duplicati",
 		"description": "Deploy Duplicati Container",
 		"categories": [
