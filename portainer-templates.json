@@ -87,6 +87,16 @@
 		"network": "bridge",
 		"restart_policy": "always",
 		"ports": ["8200/tcp"],
-		"volumes": [{"container": "/source","bind": "/var/lib/docker/volumes"},"/config"]
+		"volumes": [{"container": "/source","bind": "/var/lib/docker/volumes"},"/config"],
+		"env": [{
+				"name": "PGID",
+				"label": "PGID",
+				"set": "0"
+			},
+			{
+				"name": "PUID",
+				"label": "PUID",
+				"set": "0"
+			}]
 	}
 ]
