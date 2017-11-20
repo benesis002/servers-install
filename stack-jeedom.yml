@@ -31,12 +31,11 @@ services:
      volumes:
       - data:/var/www/html
       - backup:/mnt/backup
+      - /dev/bus/usb/001/004:/dev/ttyacm0
      network_mode: host
      container_name: jeedom
      networks:
-      - jeedom-dedicated
-     devices:
-      - /dev/bus/usb/001/004:/dev/ttyacm0
+      - jeedom-dedicated  
       
 networks:
   jeedom-dedicated:
