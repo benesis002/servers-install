@@ -27,7 +27,7 @@ services:
      volumes:
       - jeedom_data:/var/www/html
       - zwave_usb_key:/dev/ttyacm0
-      - backup:/mnt/backup
+      - jeedom_backup:/mnt/backup
      networks:
       - jeedom-dedicated
       - host
