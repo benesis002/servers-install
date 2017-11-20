@@ -33,7 +33,7 @@ services:
       - host
       
 networks:
-  jeedom-dedicated
+  jeedom-dedicated:
   
 volumes:
     db_data:
