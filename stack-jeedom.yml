@@ -12,7 +12,10 @@ services:
        MYSQL_USER: jeedom
        MYSQL_PASSWORD: jeedom
      networks:
-      - jeedom-dedicated
+      - jeedom-dedicated:
+           aliases:
+            - database
+            
      container_name: jeedom-database
 
    jeedom:
@@ -20,15 +23,15 @@ services:
      links:
        - db
      ports:
-       - 80
-       - 443
+       - 80:80
+       - 443:443
      restart: always
      environment:
        ROOT_PASSWORD: ${JEEDOM_ROOT_PASSWORD}
      volumes:
-      - jeedom_data:/var/www/html
+      - data:/var/www/html
       - zwave_usb_key:/dev/ttyacm0
-      - jeedom_backup:/mnt/backup
+      - backup:/mnt/backup
      network_mode: host
      container_name: jeedom
      networks:
@@ -39,6 +42,6 @@ networks:
   
 volumes:
     db_data:
-    jeedom_data:
+    data:
     zwave_usb_key:
-    jeedom_backup:
+    backup:
