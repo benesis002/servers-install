@@ -30,12 +30,13 @@ services:
        ROOT_PASSWORD: ${JEEDOM_ROOT_PASSWORD}
      volumes:
       - data:/var/www/html
-      - zwave_usb_key:/dev/ttyacm0
       - backup:/mnt/backup
      network_mode: host
      container_name: jeedom
      networks:
       - jeedom-dedicated
+     devices:
+      - "/dev/bus/usb/001/004:/dev/ttyacm0"
       
 networks:
   jeedom-dedicated:
@@ -43,5 +44,4 @@ networks:
 volumes:
     db_data:
     data:
-    zwave_usb_key:
     backup:
