@@ -12,7 +12,7 @@ services:
        MYSQL_USER: jeedom
        MYSQL_PASSWORD: jeedom
      networks:
-      - jeedom-dedicated:
+         jeedom-dedicated:
            aliases:
             - database
             
