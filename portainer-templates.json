@@ -143,19 +143,25 @@
     "type": "stack",
     "title": "Jeedom",
     "description": "Deploy Jeedom server",
-    "note": "Deploys a Jeedom with a MySQL database.",
+    "note": "Deploys a Jeedom with a MySQL database,
     "categories": ["domotique"],
     "platform": "linux",
     "logo": "https://www.jeedom.com/site/logo.png",
+    "volumes": [{"container": "/zwave_usb_key","bind": "/dev/bus/usb/001/004"},"/db_data","/jeedom_data","/jeedom_backup"],
     "repository": {
       "url": "https://github.com/benesis002/servers-install",
-      "stackfile": "stacks/jeedom/docker-stack.yml"
+      "stackfile": "stack-jeedom.yml"
     },
     "env": [
       {
         "name": "MYSQL_ROOT_PASSWORD",
         "label": "Database root password",
         "description": "Password used by the MySQL root user."
+      },
+      {
+        "name": "JEEDOM_ROOT_PASSWORD",
+        "label": "Jeedom Server root password",
+        "description": "Password used by Jeedom root user."
       }
     ]
   }
