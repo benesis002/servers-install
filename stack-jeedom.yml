@@ -12,13 +12,13 @@ services:
        MYSQL_USER: jeedom
        MYSQL_PASSWORD: jeedom
      networks:
-         jeedom-dedicated:
-           aliases:
+       dedicated:
+         aliases:
             - database
             
      container_name: jeedom-database
 
-   jeedom:
+   server:
      image: jeedom/jeedom:latest
      links:
        - db
@@ -35,10 +35,10 @@ services:
      network_mode: host
      container_name: jeedom
      networks:
-      - jeedom-dedicated  
+      - dedicated  
       
 networks:
-  jeedom-dedicated:
+  dedicated:
   
 volumes:
     db_data:
