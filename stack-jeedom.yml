@@ -7,7 +7,7 @@ services:
        - db_data:/var/lib/mysql
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
+       MYSQL_ROOT_PASSWORD: jeedom
        MYSQL_DATABASE: jeedom
        MYSQL_USER: jeedom
        MYSQL_PASSWORD: jeedom
