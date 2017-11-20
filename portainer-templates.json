@@ -143,7 +143,7 @@
     "type": "stack",
     "title": "Jeedom",
     "description": "Deploy Jeedom server",
-    "note": "Deploys a Jeedom with a MySQL database,
+    "note": "Deploys a Jeedom with a MySQL database",
     "categories": ["domotique"],
     "platform": "linux",
     "logo": "https://www.jeedom.com/site/logo.png",
