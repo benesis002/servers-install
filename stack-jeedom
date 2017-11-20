@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+   db:
+     image: mysql:latest
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
+       MYSQL_DATABASE: jeedom
+       MYSQL_USER: jeedom
+       MYSQL_PASSWORD: jeedom
+     networks:
+      - jeedom-dedicated
+
+   jeedom:
+     image: jeedom/jeedom:latest
+     links:
+       - db
+     ports:
+       - 80
+       - 443
+     restart: always
+     environment:
+       ROOT_PASSWORD: ${JEEDOM_ROOT_PASSWORD}
+     volumes:
+      - jeedom_data:/var/www/html
+      - zwave_usb_key:/dev/ttyacm0
+      - backup:/mnt/backup
+     networks:
+      - jeedom-dedicated
+      - host
+      
+networks:
+  jeedom-dedicated
+  
+volumes:
+    db_data:
+    jeedom_data:
+    zwave_usb_key:
+    jeedom_backup:
