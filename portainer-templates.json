@@ -117,6 +117,10 @@
       "/var/www/html",
       "/mnt/backup"
     ],
+    "ports": [
+      "80/tcp",
+      "443/tcp"
+    ],
     "env": [
       {
         "name": "ROOT_PASSWORD",
