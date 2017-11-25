@@ -91,6 +91,53 @@
 	},
  	{
 		"type": "container",
+		"title": "Jeedom Server",
+		"description": "Deploy a Jeedom Container",
+		"categories": [
+			"domotique"
+		],
+		"platform": "linux",
+		"logo": "https://www.jeedom.com/site/logo.png",
+		"image": "jeedom/jeedom:latest",
+		"network": "host",
+		"restart_policy": "always",
+		"volumes": ["/var/www/html","/mnt/backup"],
+		"env": [{
+				"name": "ROOT_PASSWORD",
+				"label": "ROOT_PASSWORD"
+			}]
+	},
+ 	{
+		"type": "container",
+		"title": "MySQL DB",
+		"description": "Deploy a MySQL Database Container",
+		"categories": [
+			"database"
+		],
+		"platform": "linux",
+		"logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png",
+		"image": "mysql:latest",
+		"network": "dedicated",
+		"restart_policy": "always",
+		"volumes": ["/var/lib/mysql"],
+		"env": [{
+				"name": "MYSQL_ROOT_PASSWORD",
+				"label": "MYSQL_ROOT_PASSWORD"
+			},
+			{
+				"name": "MYSQL_DATABASE",
+				"label": "MYSQL_DATABASE",
+			},
+			{
+				"name": "MYSQL_USER",
+				"label": "MYSQL_USER",
+			},
+			{
+				"name": "MYSQL_PASSWORD",
+				"label": "MYSQL_PASSWORD",
+			}]
+	},{
+		"type": "container",
 		"title": "Duplicati",
 		"description": "Deploy Duplicati Container",
 		"categories": [
