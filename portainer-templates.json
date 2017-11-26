@@ -138,8 +138,11 @@
     "platform": "linux",
     "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png",
     "image": "mysql:latest",
-    "network": "dedicated",
+    "network": "host",
     "restart_policy": "always",
+    "ports": [
+      "3306/tcp"
+    ],
     "volumes": [
       "/var/lib/mysql"
     ],
