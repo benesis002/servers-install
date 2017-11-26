@@ -130,6 +130,43 @@
   },
   {
     "type": "container",
+    "title": "MySQL DB ARM",
+    "description": "Deploy a MySQL Database Container",
+    "categories": [
+      "database"
+    ],
+    "platform": "linux",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png",
+    "image": "hypriot/rpi-mysql:latest",
+    "network": "host",
+    "restart_policy": "always",
+    "ports": [
+      "3306/tcp"
+    ],
+    "volumes": [
+      "/var/lib/mysql"
+    ],
+    "env": [
+      {
+        "name": "MYSQL_ROOT_PASSWORD",
+        "label": "MYSQL_ROOT_PASSWORD"
+      },
+      {
+        "name": "MYSQL_DATABASE",
+        "label": "MYSQL_DATABASE"
+      },
+      {
+        "name": "MYSQL_USER",
+        "label": "MYSQL_USER"
+      },
+      {
+        "name": "MYSQL_PASSWORD",
+        "label": "MYSQL_PASSWORD"
+      }
+    ]
+  },
+  {
+    "type": "container",
     "title": "MySQL DB",
     "description": "Deploy a MySQL Database Container",
     "categories": [
