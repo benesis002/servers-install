@@ -130,6 +130,33 @@
   },
   {
     "type": "container",
+    "title": "Jeedom Server ARM",
+    "description": "Deploy a Jeedom Container",
+    "categories": [
+      "domotique"
+    ],
+    "platform": "linux",
+    "logo": "https://www.jeedom.com/site/logo.png",
+    "image": "sbeuzit/rpi-jeedom-oz",
+    "network": "host",
+    "restart_policy": "always",
+    "volumes": [
+      "/var/www/html",
+      "/mnt/backup"
+    ],
+    "ports": [
+      "80/tcp",
+      "443/tcp"
+    ],
+    "env": [
+      {
+        "name": "ROOT_PASSWORD",
+        "label": "ROOT_PASSWORD"
+      }
+    ]
+  },
+  {
+    "type": "container",
     "title": "MySQL DB ARM",
     "description": "Deploy a MySQL Database Container",
     "categories": [
