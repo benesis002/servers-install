@@ -110,7 +110,7 @@
     ],
     "platform": "linux",
     "logo": "https://www.jeedom.com/site/logo.png",
-    "image": "jeedom/jeedom:latest",
+    "image": "benesis002/jeedom:latest",
     "network": "host",
     "restart_policy": "always",
     "volumes": [
@@ -137,7 +137,7 @@
     ],
     "platform": "linux",
     "logo": "https://www.jeedom.com/site/logo.png",
-    "image": "sbeuzit/rpi-jeedom-oz",
+    "image": "benesis002/jeedom-rpi",
     "network": "host",
     "restart_policy": "always",
     "volumes": [
