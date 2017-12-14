@@ -334,5 +334,40 @@
         "description": "Password used by Jeedom root user."
       }
     ]
+  },
+  {
+    "type": "stack",
+    "title": "CSA-CE",
+    "description": "Deploy OO CSA Stack",
+    "categories": [
+      "orchestration"
+    ],
+    "platform": "linux",
+    "logo": "https://www.jeedom.com/site/logo.png",
+    "volumes": [
+      {
+        "container": "/zwave_usb_key",
+        "bind": "/dev/bus/usb/001/004"
+      },
+      "/db_data",
+      "/jeedom_data",
+      "/jeedom_backup"
+    ],
+    "repository": {
+      "url": "https://github.com/HewlettPackard/csa-ce",
+      "stackfile": "docker-compose.yml"
+    },
+    "env": [
+      {
+        "name": "vmhostname",
+        "label": "vmhostname",
+        "description": "vmhostname"
+      },
+      {
+        "name": "vmipaddress",
+        "label": "vmipaddress",
+        "description": "vmipaddress"
+      }
+    ]
   }
 ]
