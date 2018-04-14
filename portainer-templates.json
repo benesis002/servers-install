@@ -310,9 +310,9 @@
     "platform": "linux",
     "logo": "https://www.jeedom.com/site/logo.png",
     "volumes": [
-      "/jeedom_db_data",
-      "/jeedom_data",
-      "/jeedom_backup"
+      "/jeedom-db-data",
+      "/jeedom-data",
+      "/jeedom-backup"
     ],
     "repository": {
       "url": "https://github.com/benesis002/servers-install",
