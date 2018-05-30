@@ -30,11 +30,16 @@ services:
        ROOT_PASSWORD: ${JEEDOM_ROOT_PASSWORD}
      volumes:
       - data:/var/www/html
-      - backup:/mnt/backup
+     tmpfs:
+      - /var/www/html/log
+      - /tmp/jeedom/cache      
+      - /tmp/jeedom/backup
      network_mode: host
      container_name: jeedom
      networks:
-      - dedicated  
+      - dedicated
+      external:
+         name: host
       
 networks:
   dedicated:
@@ -42,4 +47,3 @@ networks:
 volumes:
     db_data:
     data:
-    backup:
