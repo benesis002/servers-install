@@ -19,7 +19,7 @@ services:
      container_name: jeedom-database
 
    server:
-     image: jeedom/jeedom:latest
+     image: jeedom/jeedom:master
      links:
        - db
      ports:
@@ -33,7 +33,6 @@ services:
       - /var/www/html/log
       - /tmp/jeedom/cache      
       - /tmp/jeedom/backup
-     network_mode: host
      container_name: jeedom
      networks:
       - dedicated
