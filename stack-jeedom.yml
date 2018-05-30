@@ -19,7 +19,7 @@ services:
      container_name: jeedom-database
 
    server:
-     image: jeedom/jeedom:stable
+     image: jeedom/jeedom:master
      links:
        - db
      ports:
