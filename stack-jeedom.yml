@@ -1,8 +1,8 @@
-version: '3'
+version: '3.5'
 
 services:
    db:
-     image: mysql/mysql-server:5.6
+     image: mysql/mysql-server:5.7
      volumes:
        - db_data:/var/lib/mysql
      restart: always
@@ -10,20 +10,20 @@ services:
        MYSQL_ROOT_PASSWORD: jeedom
        MYSQL_DATABASE: jeedom
        MYSQL_USER: jeedom
-       MYSQL_PASSWORD: jeedom
+       MYSQL_PASSWORD: jeedom          
+     container_name: jeedom-database
      networks:
        dedicated:
          aliases:
             - database
-            
-     container_name: jeedom-database
 
    server:
      image: jeedom/jeedom:stable
-     links:
-       - db
+#     links:
+#       - "db:database"
      ports:
-       - 8090:80
+       - 80:80
+       - 443:443
      restart: always
      environment:
        ROOT_PASSWORD: ${JEEDOM_ROOT_PASSWORD}
@@ -34,13 +34,25 @@ services:
       - /tmp/jeedom/cache      
       - /tmp/jeedom/backup
      container_name: jeedom
-     privileged: true
      networks:
-      - dedicated
-      
+       - dedicated
+       - forbroad
+     
 networks:
   dedicated:
-  
+  forbroad:
+    external:
+      name: vlan_home_automation
+
+#   cache:
+#    image: memcached:alpine
+#     links:
+#      - server
+#    restart: always
+#    container_name: jeedom-memcached
+#    networks:
+#     - dedicated  
+      
 volumes:
     db_data:
     data:
