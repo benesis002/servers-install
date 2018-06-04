@@ -18,7 +18,7 @@ services:
             - database
 
    server:
-     image: jeedom/jeedom:latest
+     image: jeedom/jeedom:stable
 #     links:
 #       - "db:database"
      ports:
