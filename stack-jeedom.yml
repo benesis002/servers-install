@@ -33,6 +33,7 @@ services:
       - /tmp/jeedom/cache      
       - /tmp/jeedom/backup
      container_name: jeedom
+     command: "sed -i 's/max_execution_time = 300/max_execution_time = 600/g' /etc/php/7.0/apache2/php.ini"
      networks:
        - dedicated
        - forbroad
